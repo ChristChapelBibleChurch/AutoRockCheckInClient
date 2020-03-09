@@ -1,0 +1,44 @@
+# Set the default behavior for line endings to LF
+* text=auto
+
+# Set the behavior for C-Sharp files
+*.cs        diff=csharp
+*.cshtml    diff=csharp
+*.razor     diff=csharp
+
+# Explicitly set line endings for Windows files
+*.bat   eol=crlf
+*.cmd   eol=crlf
+*.ps1   eol=crlf
+
+# Set the behavior for documentation files
+*.bibtex    text    diff=bibtex
+*.doc               diff=astextplain
+*.DOC               diff=astextplain
+*.docx              diff=astextplain
+*.DOCX              diff=astextplain
+*.pdf               diff=astextplain
+*.PDF               diff=astextplain
+*.rtf               diff=astextplain
+*.RTF               diff=astextplain
+*.tex       text    diff=tex
+
+# Set the behavior for graphic files
+*.gif   binary
+*.ico   binary
+*.jpeg  binary
+*.jpg   binary
+*.png   binary
+*.svg   text
+*.tif   binary
+*.tiff  binary
+
+# Set the behavior for archive files
+*.7z    binary
+*.gz    binary
+*.tar   binary
+*.zip   binary
+
+# Excluded files
+.gitattributes  export-ignore
+.gitignore      export-ignore

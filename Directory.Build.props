@@ -1,0 +1,40 @@
+<Project>
+  <PropertyGroup>
+    <!-- Project information -->
+    <Company>Christ Chapel Bible Church</Company>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) $(Company)</Copyright>
+    <Product>Rock RMS Check-In</Product>
+
+    <!-- Repository information -->
+    <RepositoryType>git</RepositoryType>
+    
+    <!-- .NET Framework configuration -->
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+
+    <!-- Roslyn configuration -->
+    <Deterministic>true</Deterministic>
+    <Features>strict</Features>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+
+    <!-- Build configuration -->
+    <Optimize>true</Optimize>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <Optimize Condition="'$(Configuration)' == 'Debug'">false</Optimize>
+    <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Debug'">false</TreatWarningsAsErrors>
+
+    <!-- Assembly configuration -->
+    <AssemblyName>org.christchapelbc.RockRMS.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>org.christchapelbc.RockRMS.$(MSBuildProjectName)</RootNamespace>
+
+    <!-- NuGet Package configuration -->
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    
+    <IsPackable Condition="$(MSBuildProjectName.EndsWith('Test'))">false</IsPackable>
+  </PropertyGroup>
+</Project>
